@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"><!--Referenciação ao código CSS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+</head>
+<body>
+    <audio id="fase1" autoplay loop onloadedmetadata="this.volume=0.3">
+        <source src="sounds/som1.mp3" type="audio/mpeg">
+    </audio>
+    <main>
+        <header>
+            <!--contador de vida-->
+            <div id = "life-score">
+                <p></p>
+                <div id="barra-de-vida">
+                    <div id="barra"><span id="valor">100%</span></div>
+                </div>     
+            </div>
+            <!--barra de progresso-->
+            <div id = "barra-progresso">
+                <div><div ><span id = progress-text>0%</span></div></div>
+            </div>
+            <div class="proxfase">
+                <a href="dewdewfdsFadsad.html" > Próxima fase </a>
+            </div>
+        </header>
+        <!--botao de continuar do menu de pause-->
+        
+        
+
+        <div class = "character "id = "character">
+            <div class="inner-circle" id = "inner-circle">
+            </div>
+        </div> <!--Div do personagem-->
+
+        <div class = "enemies" id = "enemies">
+
+        </div>
+
+        <!-- Tela de gameover -->
+        <div id="game-over-screen" style="display: none;">
+            <h1> GAME OVER </h1>
+            <p> final points: <span id="final-score"></span></p>
+            <button onclick="restartGame()">Go back to Menu</button> 
+            <!-- usando o restart game temporariamente pq ainda n criamos o menu-->
+        </div>
+        
+        <script src="script.js"></script><!--Referenciação ao código JS-->
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,233 @@
+main{
+    display: grid;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    opacity: 1;
+    background-image: url('assets/fase2.png'); 
+    background-size: cover;
+    background-position: center;
+}
+@keyframes distort1 {
+    0%    { top: 49.5%; left: 49.5%; }
+    12.5% { top: 49.5%; left: 50%; }
+    25%   { top: 49.5%; left: 50.5%; }
+    37.5% { top: 50%; left: 50.5%; }
+    50%   { top: 50.5%; left: 50.5%; }
+    62.5% { top: 50.5%; left: 50%; }
+    75%   { top: 50.5%; left: 49.5%; }
+    87.5% { top: 50%; left: 49.5%; }
+    100%  { top: 49.5%; left: 49.5%; }
+}
+
+@keyframes distort2 {
+    0%    { top: 50.5%; left: 50.5%; }
+    12.5% { top: 50%; left: 50.5%; }
+    25%   { top: 49.5%; left: 50.5%; }
+    37.5% { top: 49.5%; left: 50%; }
+    50%   { top: 49.5%; left: 49.5%; }
+    62.5% { top: 50%; left: 49.5%; }
+    75%   { top: 50.5%; left: 49.5%; }
+    87.5% { top: 50.5%; left: 50%; }
+    100%  { top: 50.5%; left: 50.5%; }
+}
+
+.proxfase{
+
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+    align-self: center;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0px 0px 3px white;
+    visibility: hidden;
+    &:hover {
+		&:before, &:after{
+			position: absolute;
+			content: 'Próxima fase';
+			transform: translate(-50%,-50%);
+			z-index: -1;
+            white-space: nowrap;
+		}
+
+		&:before {
+			top: 49.5%;
+			left: 49.5%;
+			color:rgb(0, 8, 255);
+			animation: distort1 300ms linear infinite;
+		}
+
+		&:after {
+			top: 50.5%;
+			left: 50.5%;
+			color: rgb(255, 0, 195);
+			animation: distort2 300ms linear infinite;
+		}
+    }
+}
+
+header {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+
+#life-score {
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    justify-self: left;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    justify-content: center;
+    align-items: center;
+    color: white
+
+}
+
+#progress-text {
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#life-score #barra{
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+    margin: 15px;
+    border: 5px solid white;
+    transition: width 0.5s ease-in-out, margin 0.5s ease-in-out;
+
+}
+#life-score #valor{
+    font-family: "Pixelify Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    justify-self: center;
+    width: 100%;
+    background-color: rgb(54, 0, 191);
+    justify-content: center;
+    display: grid;
+}
+
+#barra-progresso div{
+    justify-self: center;
+    padding: 1px;
+    border-style: solid;
+    border: 5px;
+    border-color: white;
+    transition: width 0.5s ease-in-out, margin 0.5s ease-in-out;
+    width:20%;
+    background-color: white;
+    justify-content: center;
+    display: grid;
+}
+
+#barra-progresso div div{
+    justify-self: center;
+}
+
+
+#barra-progresso {
+    width: 100%;
+    border: 1px solid white;
+    border-width: 5px;
+    left: 50%;
+    margin-left: 100px;
+}
+
+
+.menu{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    display: grid;
+}
+
+
+.character {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    border-color: white;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.05s ease-out;
+    background-image: url('assets/mainbubble.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.inner-circle {
+    background-color: blue;
+    border-radius: 50%;
+    background-image: url('assets/centerbubble.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.enemies{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enemies .etype1{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets/inimigo2.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.enemies .etype2{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-style: solid;
+    border-radius:10%;
+    display: flex;
+    background-image: url('assets/inimigo2.png');
+    justify-content: center;
+    align-items: center;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+}
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+}

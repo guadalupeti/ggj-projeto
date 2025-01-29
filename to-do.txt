@@ -1,0 +1,16 @@
+----principais----
+- fazer função endgame em script.js
+- menu (html, css e js)
+- inimigos (html, css e js)
+- arte do jogo (chap esta fazendo)
+- musica (thomas esta fazendo)
+
+- implementar musicas nas fases;
+- implementar efeitos sonoros;
+
+----extras----
+- sistema de progressão de fases
+- sistema de habilidades
+- sessão de créditos
+
+

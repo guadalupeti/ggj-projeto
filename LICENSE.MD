@@ -1,0 +1,1 @@
+Popnetic © 2025 by Carlos Roberto da Silva, João Pedro Lemos Guadalupe, Gabriela de Freitas Chapinotti, Gustavo Corzino Caiafa, Gustavo Mendonça Monard, Eduarda de Souza Caniato da Paixão, Thomas Adam Chapman is licensed under CC BY-NC-SA 4.0 
